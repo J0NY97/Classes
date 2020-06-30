@@ -1,0 +1,9 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles x, y, z, w, and colors.
+
+An instance can be constructed from x, y, z, w and color;
+new Vertex ( array( 'x' => 1, 'y' => 1, 'z' => 1, 'w' => 1, 'color' => new Color() )
+
+If 'w' is not given it will default to '1.0'.
+If 'color' is not given it will default to the color white.
+---------------------------------------------------------------------- Vertex ->

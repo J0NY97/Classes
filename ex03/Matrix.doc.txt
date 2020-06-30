@@ -1,0 +1,30 @@
+<- Matrix ----------------------------------------------------------------------
+The Matrix class handles calculations of 4x4 matrices.
+
+An instance can be constructed from a "preset" and/or either;
+an identity:
+new Matrix ( array( "preset" => "IDENTITY" ) );
+
+a scale:
+new Matrix ( array( "preset" => "SCALE", "scale" => int ) );
+
+a rotation:
+new Matrix ( array( "preset" => "RX" || "RY || "RZ", "angle" => int ) );
+
+translation:
+new Matrix ( array( "preset" => "TRANSLATION", "vtc" => Vector ) );
+
+or projection:
+new Matrix ( array( "preset" => "PROJECTION", "fov" => int,
+					"ratio" => int, "near" => int, "far" => int ) );
+
+Functions:
+void	identity($scale);
+void	translation(void);
+void	rotateX(void);
+void	rotateY(void);
+void	rotateZ(void);
+void	projection(void);
+Vector	mult(Vector $rhs);
+Vector	transformVertex(Vertex $vtx);
+---------------------------------------------------------------------- Matrix ->
